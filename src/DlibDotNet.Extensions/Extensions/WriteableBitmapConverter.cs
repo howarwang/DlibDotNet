@@ -1,4 +1,4 @@
-﻿#if DOTNET_FRAMEWORK
+﻿#if WPF
 using System;
 using System.Collections.Generic;
 using System.Linq;
