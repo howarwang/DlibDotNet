@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
     <Authors>Takuya Takeuchi</Authors>
-    <Description>.NET wrapper for DLib written in C#</Description>
+    <Description>Extension package for DlibDotNet</Description>
     <Company />
     <Copyright>© Takuya Takeuchi 2018-2020</Copyright>
     <Configurations>Debug;Release</Configurations>
@@ -29,7 +29,7 @@
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <Optimize>true</Optimize>
-    <DocumentationFile>docs\DlibDotNet.xml</DocumentationFile>
+    <DocumentationFile>docs\DlibDotNet.Extensions.xml</DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net461'">
@@ -41,13 +41,8 @@
   </PropertyGroup>
 
   <ItemGroup Condition="!$(TargetFramework.Contains('netstandard')) And !$(TargetFramework.Contains('netcoreapp')) ">
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="WindowsBase" />
     <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
   <ItemGroup Condition="$(TargetFramework.Contains('netstandard')) Or $(TargetFramework.Contains('netcoreapp')) ">
